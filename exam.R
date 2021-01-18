@@ -27,3 +27,13 @@ t.test(height$height, alternative = "two.sided", mu = 161, conf.level = 0.95)
 library(pwr)
 pwr.t.test(d = 0.5, power = 0.8, sig.level = 0.05)
 # !!! n * 2 !!!
+
+### ANOVA ###
+library(readxl)
+library(sjstats)
+dwelltime <- read_excel("dwelltime.xlsx")
+View(dwelltime)
+options(contrasts = c("contr.sum", "contr.sum"))
+fit  <-  aov(DV  ~  factor(IV1),  data  =  dwelltime)
+summary(fit)
+
