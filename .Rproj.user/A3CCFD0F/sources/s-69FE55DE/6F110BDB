@@ -1,0 +1,32 @@
+{
+    "id": "6F110BDB",
+    "path": null,
+    "project_path": null,
+    "type": "r_dataframe",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1610974830150.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "expression": "address_sample",
+        "caption": "address_sample",
+        "totalObservations": "300",
+        "displayedObservations": "300",
+        "variables": "4",
+        "cacheKey": "1404702E",
+        "object": "address_sample",
+        "environment": "",
+        "contentUrl": "grid_resource/gridviewer.html?env=&obj=address_sample&cache_key=1404702E&max_cols=50",
+        "preview": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 0,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1610974830150,
+    "read_only": false,
+    "read_only_alternatives": []
+}
