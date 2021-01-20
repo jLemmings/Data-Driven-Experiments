@@ -28,6 +28,11 @@ library(pwr)
 pwr.t.test(d = 0.5, power = 0.8, sig.level = 0.05)
 # !!! n * 2 !!!
 
+### Anove Power ###
+library(pwr)
+pwr.anova.test(f = 0.25, k = 2, power = 0.8, sig.level = 0.05)
+# !!! n * 2 !!!
+
 ### ANOVA ###
 library(readxl)
 library(sjstats)
@@ -37,3 +42,21 @@ options(contrasts = c("contr.sum", "contr.sum"))
 fit  <-  aov(DV  ~  factor(IV1),  data  =  dwelltime)
 summary(fit)
 
+
+### Univariance Anova ###
+library(readxl)
+library(sjstats)
+clickrate <-read_excel("clickrate.xlsx")
+View(clickrate)
+options(contrasts = c("contr.sum", "contr.sum"))
+fit  <-aov(DV  ~  factor(IV1),  data  =  clickrate)
+summary(fit)
+pairwise.t.test(clickrate$DV, clickrate$IV1, p.adj = "bonf")
+aggregate(clickrate$DV, list(clickrate$IV1), mean)
+eta_sq(fit)
+
+### LATIN SQUARE ###
+# install.packages("agricolae")
+library(agricolae)
+my_design_lsd <-design.lsd(trt = c("c1","c2","c3"))
+my_design_lsd$sketch
